@@ -1,10 +1,8 @@
-import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-// import ImageSlider from 'react-native-image-slider';
+import React, { Component } from 'react';
+import { StatusBar, StyleSheet, View } from 'react-native';
 import Slideshow from 'react-native-image-slideshow';
-// import IMG from './image';
 
-export default class App extends React.Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
 
@@ -41,7 +39,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        {/* <Text style={styles.text}>Gallery</Text> */}
+        <StatusBar />
         <Slideshow
           style={styles.slider}
           dataSource={this.state.dataSource}
@@ -49,14 +47,12 @@ export default class App extends React.Component {
           onPositionChanged={position => this.setState({ position })}
           indicatorSize={this.state.indicatorSize}
           height={this.state.height} />
-        {/* <Text style={styles.text}>by Eugene</Text> */}
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-
   container: {
     flex: 1,
     justifyContent: 'center',
