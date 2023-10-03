@@ -8,8 +8,8 @@ export default class App extends Component {
 
     this.state = {
       position: 0,
-      height: 211,
-      indicatorSize: 20,
+      height: 600,
+      indicatorSize: 26,
       dataSource: [
         {
           title: 'Title 1',
